@@ -4,3 +4,12 @@ una practica básica de microservicios, usando unas tecnologías que me contaron
 El objetivo es usar lo más posible de spring cloud suite y sus diversos sub modulos.
 
 
+Avances 19-08
+Quise catar desde el concepto del gateway, en x entrevista se me dijo que eureka es un servicio
+provisional extra para solo indicar tu hosteo de proys. No necesitas eureka para eso, 
+puedes hacer tus microservicios mas customizables, y ahi es donde empiezo a absorver mejor
+tales conceptos. Hice un gateway apuntando a mi servicio con puero 8085, el gateway
+procesa todo por el servicio 8080 estandar y redirige todo bien hacia mi servicio de login.
+
+La libreria tiene configuraciones diversas como rate limiting y el famoso
+circuit breaker... lo aplicaré en su momento, debo terminar los servicios
