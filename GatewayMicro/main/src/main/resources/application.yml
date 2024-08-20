@@ -1,0 +1,20 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: servicio_login
+          uri: http://localhost:8085
+          predicates:
+            - Path=/api/v1/mx
+            - Method=POST,GET
+        - id: servicio_usuarios
+          uri: http://localhost:8086
+          predicates:
+            - Path=/get/all
+            - Method=GET
+                 
+        - id: servicio_create_usuario
+          uri: http://localhost:8085
+          predicates:
+            - Path=/api/v1/mx/create
+            - Method=POST
