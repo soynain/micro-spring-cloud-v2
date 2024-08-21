@@ -18,3 +18,24 @@ spring:
           predicates:
             - Path=/api/v1/mx/create
             - Method=POST
+        - id: servicio_tasks
+          uri: http://localhost:8089
+          predicates:
+            - Path=/api/v1/mx/tasks
+            - Method=POST,GET,PUT
+        - id: servicio_tasks_create
+          uri: http://localhost:8089
+          predicates:
+            - Path=/api/v1/mx/tasks/create/new
+            - Method=POST
+        - id: servicio_tasks_gettasks
+          uri: http://localhost:8089
+          predicates:
+            - Path=/api/v1/mx/tasks/list/get
+            - Method=GET
+        - id: servicio_tasks_updatetask
+          uri: http://localhost:8089
+          predicates:
+            - Path=/api/v1/mx/tasks/change-status
+            - Method=Put
+        
