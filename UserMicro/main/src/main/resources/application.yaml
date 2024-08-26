@@ -17,6 +17,13 @@ spring:
       resourceserver:
         jwt:
           public-key-location: classpath:public_key.pem
+          
 server:
   port : 8085
+
+jwt:
+  secret: TuClaveMuyLargaSuperSeguraConMinimo32Caracteres # Cambia esto por una clave segura para firmar el JWT
+  expiration: 86400000 # Tiempo de expiración del token en milisegundos (1 día en este caso)
+  private-key-path: main\src\main\resources\private_key.pem
  
+  
